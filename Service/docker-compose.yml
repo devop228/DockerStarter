@@ -1,4 +1,4 @@
-version: "3"
+version: "3.4"
 services:
   web:
     image: yzhu228/get-started:container-latest
@@ -8,12 +8,12 @@ services:
         limits:
           cpus: "0.1"
           memory: 50M
-        restart_policy:
-          condition: on-failure
-      ports:
-        - "80:80"
-      networks:
-        - webnet
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "80:80"
+    networks:
+      - webnet
 networks:
   webnet:
 
